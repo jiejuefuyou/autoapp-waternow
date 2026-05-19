@@ -11,24 +11,35 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 24) {
-                progressRing
+            // FIX (Apple Review 2026-05-19 Guideline 4 reject on iPad Air 5th gen iPadOS 26.5):
+            // reviewer reported "bottom of the screen was cropped". Root cause:
+            // 200pt ring + cup buttons (4 × ~60pt) + beverage picker exceeds
+            // landscape iPad usable height (~692pt minus chrome). Wrap in
+            // ScrollView so content scrolls instead of clipping. Adds bottom
+            // safe-area inset padding so last button isn't hidden by home indicator.
+            ScrollView {
+                VStack(spacing: 24) {
+                    progressRing
 
-                Text("\(store.todayTotal()) / \(store.dailyGoalML) ml")
-                    .font(.title.bold().monospacedDigit())
+                    Text("\(store.todayTotal()) / \(store.dailyGoalML) ml")
+                        .font(.title.bold().monospacedDigit())
 
-                Text(String(format: NSLocalizedString("%@ of daily goal", comment: "Percent label under hydration ring"),
-                            "\(Int(store.todayPercent() * 100))%"))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                    Text(String(format: NSLocalizedString("%@ of daily goal", comment: "Percent label under hydration ring"),
+                                "\(Int(store.todayPercent() * 100))%"))
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
 
-                beveragePicker
-                    .padding(.horizontal)
+                    beveragePicker
+                        .padding(.horizontal)
 
-                cupSizeButtons
-                    .padding(.horizontal)
+                    cupSizeButtons
+                        .padding(.horizontal)
+                }
+                .padding()
+                .padding(.bottom, 24)   // home indicator clearance on iPad without bottom bar
+                .frame(maxWidth: 600)    // iPad: prevent ring stretching too wide
+                .frame(maxWidth: .infinity)  // center the bounded content
             }
-            .padding()
             .navigationTitle(Text("WaterNow"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
