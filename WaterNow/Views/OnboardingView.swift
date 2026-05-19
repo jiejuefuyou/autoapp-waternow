@@ -9,8 +9,8 @@ struct OnboardingView: View {
             screen(
                 index: 0,
                 icon: "drop.fill",
-                title: "Stay hydrated.",
-                subtitle: "Tap a cup size — water, tea, coffee — and watch your daily goal fill up.",
+                title: LocalizedStringKey("Stay hydrated."),
+                subtitle: LocalizedStringKey("Tap a cup size — water, tea, coffee — and watch your daily goal fill up."),
                 color: .cyan
             )
             .tag(0)
@@ -18,8 +18,8 @@ struct OnboardingView: View {
             screen(
                 index: 1,
                 icon: "waveform.path.ecg",
-                title: "Live in your Dynamic Island.",
-                subtitle: "Pro: Live Activity shows progress all day. Lock screen widget for one-tap log.",
+                title: LocalizedStringKey("Live in your Dynamic Island."),
+                subtitle: LocalizedStringKey("Pro: Live Activity shows progress all day. Lock screen widget for one-tap log."),
                 color: .blue
             )
             .tag(1)
@@ -27,8 +27,8 @@ struct OnboardingView: View {
             screen(
                 index: 2,
                 icon: "applewatch",
-                title: "$1.99 once.",
-                subtitle: "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription.",
+                title: LocalizedStringKey("$1.99 once."),
+                subtitle: LocalizedStringKey("Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription."),
                 color: .accentColor,
                 showCTA: true
             )
@@ -42,8 +42,8 @@ struct OnboardingView: View {
     private func screen(
         index: Int,
         icon: String,
-        title: String,
-        subtitle: String,
+        title: LocalizedStringKey,
+        subtitle: LocalizedStringKey,
         color: Color,
         showCTA: Bool = false
     ) -> some View {
@@ -66,7 +66,7 @@ struct OnboardingView: View {
                 Button {
                     hasSeenOnboarding = true
                 } label: {
-                    Text("Get Started")
+                    Text(LocalizedStringKey("Get Started"))
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()

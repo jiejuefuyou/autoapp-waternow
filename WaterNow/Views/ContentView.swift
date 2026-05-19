@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(IAPManager.self) private var iap
     @Environment(HydrationStore.self) private var store
+    @Environment(LocalizationManager.self) private var l10n
 
     @State private var showSettings = false
     @State private var showPaywall = false
@@ -16,7 +17,8 @@ struct ContentView: View {
                 Text("\(store.todayTotal()) / \(store.dailyGoalML) ml")
                     .font(.title.bold().monospacedDigit())
 
-                Text("\(Int(store.todayPercent() * 100))% of daily goal")
+                Text(String(format: NSLocalizedString("%@ of daily goal", comment: "Percent label under hydration ring"),
+                            "\(Int(store.todayPercent() * 100))%"))
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
@@ -27,7 +29,7 @@ struct ContentView: View {
                     .padding(.horizontal)
             }
             .padding()
-            .navigationTitle("WaterNow")
+            .navigationTitle(Text("WaterNow"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button { showSettings = true } label: { Image(systemName: "gear") }
@@ -35,13 +37,27 @@ struct ContentView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     if !iap.isPremium {
                         Button { showPaywall = true } label: {
-                            Label("Pro", systemImage: "sparkles").font(.caption.bold())
+                            Label(LocalizedStringKey("Pro"), systemImage: "sparkles").font(.caption.bold())
                         }
                     }
                 }
             }
-            .sheet(isPresented: $showSettings) { SettingsView() }
-            .sheet(isPresented: $showPaywall) { PaywallView() }
+            // CRITICAL: SwiftUI sheet/fullScreenCover attaches modal to scene
+            // presentation host, NOT to ContentView's view tree. The .id on
+            // WaterNowApp.swift only rebuilds ContentView itself — modal
+            // content stays stale on language change. Force rebuild per-modal.
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
+                    .environment(l10n)
+                    .environment(\.locale, l10n.currentLocale)
+                    .id(l10n.override)
+            }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
+                    .environment(l10n)
+                    .environment(\.locale, l10n.currentLocale)
+                    .id(l10n.override)
+            }
         }
     }
 
@@ -64,9 +80,10 @@ struct ContentView: View {
     }
 
     private var beveragePicker: some View {
-        Picker("Beverage", selection: $selectedBeverage) {
+        Picker(LocalizedStringKey("Beverage"), selection: $selectedBeverage) {
             ForEach(BeverageType.allCases) { b in
-                Text("\(b.emoji) \(b.displayName)").tag(b)
+                (Text("\(b.emoji) ") + Text(LocalizedStringKey(b.displayName)))
+                    .tag(b)
             }
         }
         .pickerStyle(.menu)
@@ -80,7 +97,7 @@ struct ContentView: View {
                     store.add(size.rawValue, beverage: selectedBeverage)
                 } label: {
                     HStack {
-                        Text(size.displayName)
+                        Text(LocalizedStringKey(size.displayName))
                         Spacer()
                         Image(systemName: "plus.circle.fill")
                     }

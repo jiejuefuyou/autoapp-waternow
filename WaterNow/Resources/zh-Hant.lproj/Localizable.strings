@@ -1,0 +1,66 @@
+/* WaterNow — 繁體中文 (zh-Hant) */
+
+/* App / main screen */
+"WaterNow" = "WaterNow";
+"%@ of daily goal" = "已完成每日目標的 %@";
+"Pro" = "Pro";
+
+/* Beverages */
+"Beverage" = "飲品";
+"Water" = "水";
+"Tea" = "茶";
+"Coffee" = "咖啡";
+"Juice" = "果汁";
+"Sparkling" = "氣泡水";
+"Other" = "其他";
+
+/* Cup sizes */
+"Sip (100 ml)" = "一口(100 毫升)";
+"Glass (250 ml)" = "一杯(250 毫升)";
+"Bottle (500 ml)" = "一瓶(500 毫升)";
+"Large bottle (1 L)" = "大瓶(1 公升)";
+
+/* Settings */
+"Settings" = "設定";
+"Daily Goal" = "每日目標";
+"Goal (ml)" = "目標(毫升)";
+"Apply" = "套用";
+"Premium" = "進階版";
+"Pro unlocked" = "已解鎖 Pro";
+"Unlock Pro" = "解鎖 Pro";
+"Restore Purchase" = "回復購買項目";
+"About" = "關於";
+"Version" = "版本";
+"Build" = "建置號碼";
+"Privacy Policy" = "隱私權政策";
+"Terms of Use" = "使用條款";
+"No data collected. Ever." = "永不收集任何資料。";
+"Done" = "完成";
+"Language" = "語言";
+"System default" = "跟隨系統";
+
+/* Paywall */
+"WaterNow Pro" = "WaterNow Pro";
+"One-time purchase. No subscription. Unlock everything forever." = "一次買斷,無訂閱,永久解鎖所有功能。";
+"Full history (vs 7 days free)" = "完整歷史記錄(免費版僅 7 天)";
+"Lock screen widget" = "鎖定畫面小工具";
+"Live Activity (Dynamic Island)" = "即時動態(動態島)";
+"Apple Watch complication" = "Apple Watch 複雜功能";
+"Custom hydration reminders" = "自訂喝水提醒";
+"Weekly + monthly insights" = "週報與月報";
+"Custom themes + cup sizes" = "自訂主題與水杯尺寸";
+"No subscription. No data collected. Ever." = "無訂閱,永不收集任何資料。";
+"Close" = "關閉";
+"Processing…" = "處理中…";
+"Unlock for %@" = "以 %@ 解鎖";
+"Payment will be charged to your Apple ID. This is a one-time purchase that unlocks all premium features for the lifetime of your Apple ID." = "費用將從您的 Apple ID 扣款。這是一次性買斷購買,在 Apple ID 有效期內永久解鎖所有進階功能。";
+
+/* Onboarding */
+"Stay hydrated." = "隨時補水。";
+"Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "點一下杯量——水、茶、咖啡——看著每日目標一點一滴被填滿。";
+"Live in your Dynamic Island." = "在動態島上常駐。";
+"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro:即時動態全天顯示進度,鎖定畫面小工具一鍵記錄。";
+"$1.99 once." = "1.99 美元,一次買斷。";
+"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:完整歷史、Apple Watch、自訂提醒、每週洞察,無訂閱。";
+"Get Started" = "開始使用";
+"Skip" = "略過";

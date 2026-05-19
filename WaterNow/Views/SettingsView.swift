@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(IAPManager.self) private var iap
     @Environment(HydrationStore.self) private var store
+    @Environment(LocalizationManager.self) private var l10n
     @Environment(\.dismiss) private var dismiss
 
     @State private var showPaywall = false
@@ -11,9 +12,9 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Daily Goal") {
+                Section(LocalizedStringKey("Daily Goal")) {
                     HStack {
-                        Text("Goal (ml)")
+                        Text(LocalizedStringKey("Goal (ml)"))
                         Spacer()
                         TextField("2000", text: $goalDraft)
                             .keyboardType(.numberPad)
@@ -21,38 +22,47 @@ struct SettingsView: View {
                             .frame(width: 100)
                             .onSubmit(applyGoal)
                     }
-                    Button("Apply", action: applyGoal)
+                    Button(LocalizedStringKey("Apply"), action: applyGoal)
                 }
 
-                Section("Premium") {
+                Section(LocalizedStringKey("Premium")) {
                     if iap.isPremium {
-                        Label("Pro unlocked", systemImage: "checkmark.seal.fill").foregroundStyle(.green)
+                        Label(LocalizedStringKey("Pro unlocked"), systemImage: "checkmark.seal.fill").foregroundStyle(.green)
                     } else {
                         Button { showPaywall = true } label: {
-                            Label("Unlock Pro", systemImage: "sparkles")
+                            Label(LocalizedStringKey("Unlock Pro"), systemImage: "sparkles")
                         }
                     }
-                    Button("Restore Purchase") { Task { await iap.restore() } }
+                    Button(LocalizedStringKey("Restore Purchase")) { Task { await iap.restore() } }
                 }
 
-                Section("About") {
-                    LabeledContent("Version", value: appVersion)
-                    LabeledContent("Build",   value: buildNumber)
-                    Link("Privacy Policy", destination: URL(string: "https://github.com/jiejuefuyou/autoapp-waternow/blob/main/PRIVACY.md")!)
-                    Link("Terms of Use", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
-                    Label("No data collected. Ever.", systemImage: "lock.shield.fill")
+                Section(LocalizedStringKey("Language")) {
+                    LanguagePicker()
+                }
+
+                Section(LocalizedStringKey("About")) {
+                    LabeledContent(LocalizedStringKey("Version"), value: appVersion)
+                    LabeledContent(LocalizedStringKey("Build"),   value: buildNumber)
+                    Link(LocalizedStringKey("Privacy Policy"), destination: URL(string: "https://github.com/jiejuefuyou/autoapp-waternow/blob/main/PRIVACY.md")!)
+                    Link(LocalizedStringKey("Terms of Use"), destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
+                    Label(LocalizedStringKey("No data collected. Ever."), systemImage: "lock.shield.fill")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(Text("Settings"))
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .topBarTrailing) { Button(LocalizedStringKey("Done")) { dismiss() } }
             }
             .onAppear {
                 goalDraft = "\(store.dailyGoalML)"
             }
-            .sheet(isPresented: $showPaywall) { PaywallView() }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView()
+                    .environment(l10n)
+                    .environment(\.locale, l10n.currentLocale)
+                    .id(l10n.override)
+            }
         }
     }
 
@@ -68,5 +78,22 @@ struct SettingsView: View {
 
     private var buildNumber: String {
         Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "—"
+    }
+}
+
+private struct LanguagePicker: View {
+    @Environment(LocalizationManager.self) private var l10n
+
+    var body: some View {
+        Picker(LocalizedStringKey("Language"), selection: Binding(
+            get: { l10n.override },
+            set: { l10n.setOverride($0) }
+        )) {
+            Text(LocalizedStringKey("System default")).tag("")
+            ForEach(LocalizationManager.supportedLanguages, id: \.self) { code in
+                Text(LocalizationManager.displayName(for: code)).tag(code)
+            }
+        }
+        .pickerStyle(.menu)
     }
 }

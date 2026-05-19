@@ -26,16 +26,36 @@ targets:
     platform: iOS
     sources:
       - path: WaterNow
+        excludes:
+          - "Resources/en.lproj"
+          - "Resources/ja.lproj"
+          - "Resources/zh-Hans.lproj"
+          - "Resources/zh-Hant.lproj"
+          - "Resources/ko.lproj"
+          - "Resources/es.lproj"
+          - "Resources/fr.lproj"
+          - "Resources/de.lproj"
+    resources:
+      - path: WaterNow/Resources/en.lproj
+      - path: WaterNow/Resources/ja.lproj
+      - path: WaterNow/Resources/zh-Hans.lproj
+      - path: WaterNow/Resources/zh-Hant.lproj
+      - path: WaterNow/Resources/ko.lproj
+      - path: WaterNow/Resources/es.lproj
+      - path: WaterNow/Resources/fr.lproj
+      - path: WaterNow/Resources/de.lproj
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jiejuefuyou.waternow
         PRODUCT_NAME: WaterNow
         INFOPLIST_KEY_CFBundleDisplayName: WaterNow
+        INFOPLIST_KEY_CFBundleLocalizations: "en ja zh-Hans zh-Hant ko es fr de"
         INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: "YES"
         INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait"
         TARGETED_DEVICE_FAMILY: "1"
         SUPPORTS_MACCATALYST: "NO"
+        SWIFT_EMIT_LOC_STRINGS: "YES"
 schemes:
   WaterNow:
     build:

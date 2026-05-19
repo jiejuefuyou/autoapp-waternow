@@ -1,0 +1,66 @@
+/* WaterNow — Español (es) */
+
+/* App / main screen */
+"WaterNow" = "WaterNow";
+"%@ of daily goal" = "%@ del objetivo diario";
+"Pro" = "Pro";
+
+/* Beverages */
+"Beverage" = "Bebida";
+"Water" = "Agua";
+"Tea" = "Té";
+"Coffee" = "Café";
+"Juice" = "Zumo";
+"Sparkling" = "Con gas";
+"Other" = "Otro";
+
+/* Cup sizes */
+"Sip (100 ml)" = "Sorbo (100 ml)";
+"Glass (250 ml)" = "Vaso (250 ml)";
+"Bottle (500 ml)" = "Botella (500 ml)";
+"Large bottle (1 L)" = "Botella grande (1 L)";
+
+/* Settings */
+"Settings" = "Ajustes";
+"Daily Goal" = "Objetivo diario";
+"Goal (ml)" = "Objetivo (ml)";
+"Apply" = "Aplicar";
+"Premium" = "Premium";
+"Pro unlocked" = "Pro desbloqueado";
+"Unlock Pro" = "Desbloquear Pro";
+"Restore Purchase" = "Restaurar compra";
+"About" = "Información";
+"Version" = "Versión";
+"Build" = "Compilación";
+"Privacy Policy" = "Política de privacidad";
+"Terms of Use" = "Términos de uso";
+"No data collected. Ever." = "Nunca recopilamos datos.";
+"Done" = "Hecho";
+"Language" = "Idioma";
+"System default" = "Predeterminado del sistema";
+
+/* Paywall */
+"WaterNow Pro" = "WaterNow Pro";
+"One-time purchase. No subscription. Unlock everything forever." = "Compra única. Sin suscripción. Desbloquea todo para siempre.";
+"Full history (vs 7 days free)" = "Historial completo (vs 7 días gratis)";
+"Lock screen widget" = "Widget de la pantalla bloqueada";
+"Live Activity (Dynamic Island)" = "Actividad en directo (Dynamic Island)";
+"Apple Watch complication" = "Complicación para Apple Watch";
+"Custom hydration reminders" = "Recordatorios de hidratación personalizados";
+"Weekly + monthly insights" = "Resúmenes semanales y mensuales";
+"Custom themes + cup sizes" = "Temas y tamaños de vaso personalizados";
+"No subscription. No data collected. Ever." = "Sin suscripción. Nunca recopilamos datos.";
+"Close" = "Cerrar";
+"Processing…" = "Procesando…";
+"Unlock for %@" = "Desbloquear por %@";
+"Payment will be charged to your Apple ID. This is a one-time purchase that unlocks all premium features for the lifetime of your Apple ID." = "El pago se cargará a tu Apple ID. Es una compra única que desbloquea todas las funciones premium durante toda la vida útil de tu Apple ID.";
+
+/* Onboarding */
+"Stay hydrated." = "Mantente hidratado.";
+"Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "Toca un tamaño de vaso —agua, té, café— y mira cómo se completa tu objetivo diario.";
+"Live in your Dynamic Island." = "En tu Dynamic Island, siempre a la vista.";
+"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro: la Actividad en directo muestra tu progreso todo el día. Widget de la pantalla bloqueada para registrar con un toque.";
+"$1.99 once." = "$1,99 una sola vez.";
+"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro: historial completo, Apple Watch, recordatorios personalizados, resúmenes semanales. Sin suscripción.";
+"Get Started" = "Empezar";
+"Skip" = "Omitir";

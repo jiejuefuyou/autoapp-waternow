@@ -1,0 +1,66 @@
+/* WaterNow — 日本語 (ja) */
+
+/* App / main screen */
+"WaterNow" = "WaterNow";
+"%@ of daily goal" = "1日の目標の %@";
+"Pro" = "Pro";
+
+/* Beverages */
+"Beverage" = "飲み物";
+"Water" = "水";
+"Tea" = "お茶";
+"Coffee" = "コーヒー";
+"Juice" = "ジュース";
+"Sparkling" = "炭酸水";
+"Other" = "その他";
+
+/* Cup sizes */
+"Sip (100 ml)" = "ひと口(100 ml)";
+"Glass (250 ml)" = "コップ(250 ml)";
+"Bottle (500 ml)" = "ボトル(500 ml)";
+"Large bottle (1 L)" = "大ボトル(1 L)";
+
+/* Settings */
+"Settings" = "設定";
+"Daily Goal" = "1日の目標";
+"Goal (ml)" = "目標(ml)";
+"Apply" = "適用";
+"Premium" = "プレミアム";
+"Pro unlocked" = "Pro 解除済み";
+"Unlock Pro" = "Pro を解除";
+"Restore Purchase" = "購入を復元";
+"About" = "このアプリについて";
+"Version" = "バージョン";
+"Build" = "ビルド";
+"Privacy Policy" = "プライバシーポリシー";
+"Terms of Use" = "利用規約";
+"No data collected. Ever." = "データは一切収集しません。";
+"Done" = "完了";
+"Language" = "言語";
+"System default" = "システムの設定に合わせる";
+
+/* Paywall */
+"WaterNow Pro" = "WaterNow Pro";
+"One-time purchase. No subscription. Unlock everything forever." = "買い切り。サブスクリプションなし。すべての機能を永続的に解除します。";
+"Full history (vs 7 days free)" = "全期間の履歴(無料版は7日間)";
+"Lock screen widget" = "ロック画面ウィジェット";
+"Live Activity (Dynamic Island)" = "ライブアクティビティ(ダイナミックアイランド)";
+"Apple Watch complication" = "Apple Watch コンプリケーション";
+"Custom hydration reminders" = "水分補給リマインダーをカスタマイズ";
+"Weekly + monthly insights" = "週次・月次のインサイト";
+"Custom themes + cup sizes" = "テーマとカップサイズのカスタマイズ";
+"No subscription. No data collected. Ever." = "サブスクリプションなし。データは一切収集しません。";
+"Close" = "閉じる";
+"Processing…" = "処理中…";
+"Unlock for %@" = "%@ で解除";
+"Payment will be charged to your Apple ID. This is a one-time purchase that unlocks all premium features for the lifetime of your Apple ID." = "代金は Apple ID に請求されます。これは買い切りの購入で、Apple ID の有効期間中、すべてのプレミアム機能を解除します。";
+
+/* Onboarding */
+"Stay hydrated." = "こまめに水分補給を。";
+"Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "カップサイズをタップするだけ。水・お茶・コーヒーで、1日の目標が満たされていきます。";
+"Live in your Dynamic Island." = "ダイナミックアイランドで常に確認。";
+"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro:ライブアクティビティで進捗を一日中表示。ロック画面ウィジェットでワンタップ記録。";
+"$1.99 once." = "1.99 ドル、買い切り。";
+"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:全履歴、Apple Watch、カスタムリマインダー、週次インサイト。サブスクリプションなし。";
+"Get Started" = "はじめる";
+"Skip" = "スキップ";

@@ -1,0 +1,66 @@
+/* WaterNow — 한국어 (ko) */
+
+/* App / main screen */
+"WaterNow" = "WaterNow";
+"%@ of daily goal" = "일일 목표의 %@";
+"Pro" = "Pro";
+
+/* Beverages */
+"Beverage" = "음료";
+"Water" = "물";
+"Tea" = "차";
+"Coffee" = "커피";
+"Juice" = "주스";
+"Sparkling" = "탄산수";
+"Other" = "기타";
+
+/* Cup sizes */
+"Sip (100 ml)" = "한 모금 (100 ml)";
+"Glass (250 ml)" = "한 컵 (250 ml)";
+"Bottle (500 ml)" = "한 병 (500 ml)";
+"Large bottle (1 L)" = "큰 병 (1 L)";
+
+/* Settings */
+"Settings" = "설정";
+"Daily Goal" = "일일 목표";
+"Goal (ml)" = "목표 (ml)";
+"Apply" = "적용";
+"Premium" = "프리미엄";
+"Pro unlocked" = "Pro 잠금 해제됨";
+"Unlock Pro" = "Pro 잠금 해제";
+"Restore Purchase" = "구매 복원";
+"About" = "정보";
+"Version" = "버전";
+"Build" = "빌드";
+"Privacy Policy" = "개인정보 처리방침";
+"Terms of Use" = "이용 약관";
+"No data collected. Ever." = "데이터를 절대 수집하지 않습니다.";
+"Done" = "완료";
+"Language" = "언어";
+"System default" = "시스템 기본값";
+
+/* Paywall */
+"WaterNow Pro" = "WaterNow Pro";
+"One-time purchase. No subscription. Unlock everything forever." = "일회 구매. 구독 없음. 모든 기능을 영구적으로 잠금 해제합니다.";
+"Full history (vs 7 days free)" = "전체 기록 (무료는 7일)";
+"Lock screen widget" = "잠금 화면 위젯";
+"Live Activity (Dynamic Island)" = "라이브 액티비티 (다이내믹 아일랜드)";
+"Apple Watch complication" = "Apple Watch 컴플리케이션";
+"Custom hydration reminders" = "맞춤 수분 보충 알림";
+"Weekly + monthly insights" = "주간 + 월간 인사이트";
+"Custom themes + cup sizes" = "맞춤 테마 + 컵 크기";
+"No subscription. No data collected. Ever." = "구독 없음. 데이터를 절대 수집하지 않습니다.";
+"Close" = "닫기";
+"Processing…" = "처리 중…";
+"Unlock for %@" = "%@에 잠금 해제";
+"Payment will be charged to your Apple ID. This is a one-time purchase that unlocks all premium features for the lifetime of your Apple ID." = "결제는 Apple ID로 청구됩니다. 일회 구매로 Apple ID 유효 기간 동안 모든 프리미엄 기능이 잠금 해제됩니다.";
+
+/* Onboarding */
+"Stay hydrated." = "수분 보충을 잊지 마세요.";
+"Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "컵 크기를 탭하세요 — 물, 차, 커피 — 일일 목표가 채워지는 것을 지켜보세요.";
+"Live in your Dynamic Island." = "다이내믹 아일랜드에서 바로 확인.";
+"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro: 라이브 액티비티가 하루 종일 진행 상황을 표시. 잠금 화면 위젯으로 원터치 기록.";
+"$1.99 once." = "1.99달러, 일회 구매.";
+"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro: 전체 기록, Apple Watch, 맞춤 알림, 주간 인사이트. 구독 없음.";
+"Get Started" = "시작하기";
+"Skip" = "건너뛰기";

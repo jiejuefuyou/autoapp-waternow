@@ -1,0 +1,66 @@
+/* WaterNow — 简体中文 (zh-Hans) */
+
+/* App / main screen */
+"WaterNow" = "WaterNow";
+"%@ of daily goal" = "已完成每日目标的 %@";
+"Pro" = "Pro";
+
+/* Beverages */
+"Beverage" = "饮品";
+"Water" = "水";
+"Tea" = "茶";
+"Coffee" = "咖啡";
+"Juice" = "果汁";
+"Sparkling" = "气泡水";
+"Other" = "其他";
+
+/* Cup sizes */
+"Sip (100 ml)" = "一口(100 毫升)";
+"Glass (250 ml)" = "一杯(250 毫升)";
+"Bottle (500 ml)" = "一瓶(500 毫升)";
+"Large bottle (1 L)" = "大瓶(1 升)";
+
+/* Settings */
+"Settings" = "设置";
+"Daily Goal" = "每日目标";
+"Goal (ml)" = "目标(毫升)";
+"Apply" = "应用";
+"Premium" = "高级版";
+"Pro unlocked" = "已解锁 Pro";
+"Unlock Pro" = "解锁 Pro";
+"Restore Purchase" = "恢复购买";
+"About" = "关于";
+"Version" = "版本";
+"Build" = "构建号";
+"Privacy Policy" = "隐私政策";
+"Terms of Use" = "使用条款";
+"No data collected. Ever." = "永不收集任何数据。";
+"Done" = "完成";
+"Language" = "语言";
+"System default" = "跟随系统";
+
+/* Paywall */
+"WaterNow Pro" = "WaterNow Pro";
+"One-time purchase. No subscription. Unlock everything forever." = "一次买断,无订阅,永久解锁全部功能。";
+"Full history (vs 7 days free)" = "完整历史记录(免费版仅 7 天)";
+"Lock screen widget" = "锁屏小组件";
+"Live Activity (Dynamic Island)" = "实时活动(灵动岛)";
+"Apple Watch complication" = "Apple Watch 复杂功能";
+"Custom hydration reminders" = "自定义喝水提醒";
+"Weekly + monthly insights" = "周报与月报";
+"Custom themes + cup sizes" = "自定义主题与水杯尺寸";
+"No subscription. No data collected. Ever." = "无订阅,永不收集任何数据。";
+"Close" = "关闭";
+"Processing…" = "处理中…";
+"Unlock for %@" = "以 %@ 解锁";
+"Payment will be charged to your Apple ID. This is a one-time purchase that unlocks all premium features for the lifetime of your Apple ID." = "费用将从你的 Apple ID 扣款。这是一次性买断购买,在 Apple ID 有效期内永久解锁全部高级功能。";
+
+/* Onboarding */
+"Stay hydrated." = "随时补水。";
+"Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "点一下杯量——水、茶、咖啡——看着每日目标一点点被填满。";
+"Live in your Dynamic Island." = "在灵动岛上常驻。";
+"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro:实时活动全天显示进度,锁屏小组件一键记录。";
+"$1.99 once." = "1.99 美元,买断。";
+"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:完整历史、Apple Watch、自定义提醒、每周洞察,无订阅。";
+"Get Started" = "开始使用";
+"Skip" = "跳过";
