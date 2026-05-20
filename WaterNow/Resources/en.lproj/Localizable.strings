@@ -64,3 +64,21 @@
 "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription.";
 "Get Started" = "Get Started";
 "Skip" = "Skip";
+
+/* v1.0.2 — Cup grid + Quick add + Streak + Custom amount + Reminder */
+"Today" = "Today";
+"Cups today" = "Cups today";
+"Quick add" = "Quick add";
+"Custom" = "Custom";
+"Custom amount" = "Custom amount";
+"Amount in milliliters" = "Amount in milliliters";
+"Cancel" = "Cancel";
+"Add" = "Add";
+"Streak %d days" = "Streak %d days";
+"Cup %d, filled" = "Cup %d, filled";
+"Cup %d, empty, tap to log" = "Cup %d, empty, tap to log";
+"Add %d milliliters" = "Add %d milliliters";
+"Add custom amount" = "Add custom amount";
+"Custom amount, Pro only" = "Custom amount, Pro only";
+"Time to hydrate" = "Time to hydrate";
+"Tap to log your water intake." = "Tap to log your water intake.";

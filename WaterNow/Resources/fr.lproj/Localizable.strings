@@ -64,3 +64,21 @@
 "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro : historique complet, Apple Watch, rappels personnalisés, statistiques hebdomadaires. Pas d'abonnement.";
 "Get Started" = "Commencer";
 "Skip" = "Passer";
+
+/* v1.0.2 — Cup grid + Quick add + Streak + Custom amount + Reminder */
+"Today" = "Aujourd'hui";
+"Cups today" = "Verres du jour";
+"Quick add" = "Ajout rapide";
+"Custom" = "Personnaliser";
+"Custom amount" = "Quantité personnalisée";
+"Amount in milliliters" = "Quantité en millilitres";
+"Cancel" = "Annuler";
+"Add" = "Ajouter";
+"Streak %d days" = "Série de %d jours";
+"Cup %d, filled" = "Verre %d, rempli";
+"Cup %d, empty, tap to log" = "Verre %d, vide, toucher pour enregistrer";
+"Add %d milliliters" = "Ajouter %d millilitres";
+"Add custom amount" = "Ajouter une quantité personnalisée";
+"Custom amount, Pro only" = "Quantité personnalisée, Pro uniquement";
+"Time to hydrate" = "C'est l'heure de s'hydrater";
+"Tap to log your water intake." = "Touchez pour enregistrer votre consommation.";

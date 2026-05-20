@@ -64,3 +64,21 @@
 "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:全履歴、Apple Watch、カスタムリマインダー、週次インサイト。サブスクリプションなし。";
 "Get Started" = "はじめる";
 "Skip" = "スキップ";
+
+/* v1.0.2 — Cup grid + Quick add + Streak + Custom amount + Reminder */
+"Today" = "今日";
+"Cups today" = "今日のコップ";
+"Quick add" = "クイック追加";
+"Custom" = "カスタム";
+"Custom amount" = "カスタム量";
+"Amount in milliliters" = "ミリリットル単位の量";
+"Cancel" = "キャンセル";
+"Add" = "追加";
+"Streak %d days" = "連続記録 %d 日";
+"Cup %d, filled" = "コップ %d、記録済み";
+"Cup %d, empty, tap to log" = "コップ %d、空、タップで記録";
+"Add %d milliliters" = "%d ミリリットルを追加";
+"Add custom amount" = "カスタム量を追加";
+"Custom amount, Pro only" = "カスタム量 (Pro 限定)";
+"Time to hydrate" = "水分補給の時間です";
+"Tap to log your water intake." = "タップして水分を記録しましょう。";

@@ -64,3 +64,21 @@
 "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro: 전체 기록, Apple Watch, 맞춤 알림, 주간 인사이트. 구독 없음.";
 "Get Started" = "시작하기";
 "Skip" = "건너뛰기";
+
+/* v1.0.2 — Cup grid + Quick add + Streak + Custom amount + Reminder */
+"Today" = "오늘";
+"Cups today" = "오늘의 컵";
+"Quick add" = "빠른 추가";
+"Custom" = "사용자 지정";
+"Custom amount" = "사용자 지정 양";
+"Amount in milliliters" = "양 (밀리리터)";
+"Cancel" = "취소";
+"Add" = "추가";
+"Streak %d days" = "연속 %d일";
+"Cup %d, filled" = "%d번 컵, 채워짐";
+"Cup %d, empty, tap to log" = "%d번 컵, 비어 있음, 탭하여 기록";
+"Add %d milliliters" = "%d 밀리리터 추가";
+"Add custom amount" = "사용자 지정 양 추가";
+"Custom amount, Pro only" = "사용자 지정 양 (Pro 전용)";
+"Time to hydrate" = "수분 보충 시간이에요";
+"Tap to log your water intake." = "탭하여 수분 섭취량을 기록하세요.";

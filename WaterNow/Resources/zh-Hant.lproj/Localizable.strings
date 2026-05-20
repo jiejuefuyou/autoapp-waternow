@@ -64,3 +64,21 @@
 "Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:完整歷史、Apple Watch、自訂提醒、每週洞察,無訂閱。";
 "Get Started" = "開始使用";
 "Skip" = "略過";
+
+/* v1.0.2 — Cup grid + Quick add + Streak + Custom amount + Reminder */
+"Today" = "今天";
+"Cups today" = "今天的杯數";
+"Quick add" = "快速記錄";
+"Custom" = "自訂";
+"Custom amount" = "自訂水量";
+"Amount in milliliters" = "毫升數量";
+"Cancel" = "取消";
+"Add" = "新增";
+"Streak %d days" = "已連續 %d 天";
+"Cup %d, filled" = "第 %d 杯,已記錄";
+"Cup %d, empty, tap to log" = "第 %d 杯,空,點按記錄";
+"Add %d milliliters" = "新增 %d 毫升";
+"Add custom amount" = "新增自訂水量";
+"Custom amount, Pro only" = "自訂水量,僅限 Pro";
+"Time to hydrate" = "該喝水了";
+"Tap to log your water intake." = "點按記錄你的飲水量。";
