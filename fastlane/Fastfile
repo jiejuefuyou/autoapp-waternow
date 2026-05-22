@@ -27,7 +27,7 @@ platform :ios do
       devices:       [TEST_DEVICE],
       clean:         true,
       code_coverage: true,
-      only_testing:  ["#{SCHEME}Tests", "#{SCHEME}UITests"]  # lesson #34 runtime guard
+      only_testing:  ["#{SCHEME}UITests"]  # WaterNow has UITests only (no unit Tests target); lesson #34 runtime guard via UITests
     )
   end
 
