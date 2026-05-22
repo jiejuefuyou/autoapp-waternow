@@ -27,7 +27,7 @@ platform :ios do
       devices:       [TEST_DEVICE],
       clean:         true,
       code_coverage: true,
-      only_testing:  ["#{SCHEME}Tests"]
+      only_testing:  ["#{SCHEME}Tests", "#{SCHEME}UITests"]  # lesson #34 runtime guard
     )
   end
 
