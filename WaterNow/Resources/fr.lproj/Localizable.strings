@@ -82,3 +82,21 @@
 "Custom amount, Pro only" = "Quantité personnalisée, Pro uniquement";
 "Time to hydrate" = "C'est l'heure de s'hydrater";
 "Tap to log your water intake." = "Touchez pour enregistrer votre consommation.";
+
+/* v1.0.3 — paywall loading fallback (Apple 2.1(b) fix) */
+"Loading products…" = "Chargement des produits…";
+"Products are temporarily unavailable. You can continue using WaterNow for free, or try again later." = "Les produits sont temporairement indisponibles. Vous pouvez continuer à utiliser WaterNow gratuitement ou réessayer plus tard.";
+"Try again" = "Réessayer";
+"Continue without subscription" = "Continuer sans abonnement";
+
+/* v1.0.3 — purchase result surface (Apple 2.1(b) fix) */
+"OK" = "OK";
+"Purchase failed" = "Échec de l'achat";
+"Purchase canceled." = "Achat annulé.";
+"Purchase pending" = "Achat en attente";
+"Purchase pending. We'll complete it shortly." = "Achat en attente. Nous le finaliserons sous peu.";
+"Product unavailable. Please try again later." = "Produit indisponible. Veuillez réessayer plus tard.";
+"Purchase verification failed. Please contact support." = "La vérification de l'achat a échoué. Veuillez contacter l'assistance.";
+"Unknown purchase result. Please try again." = "Résultat d'achat inconnu. Veuillez réessayer.";
+"Restores a previous purchase" = "Restaure un achat précédent";
+"Purchase WaterNow Pro for %@" = "Acheter WaterNow Pro pour %@";

@@ -82,3 +82,21 @@
 "Custom amount, Pro only" = "カスタム量 (Pro 限定)";
 "Time to hydrate" = "水分補給の時間です";
 "Tap to log your water intake." = "タップして水分を記録しましょう。";
+
+/* v1.0.3 — paywall loading fallback (Apple 2.1(b) fix) */
+"Loading products…" = "商品を読み込み中…";
+"Products are temporarily unavailable. You can continue using WaterNow for free, or try again later." = "商品を一時的に取得できません。無料版のままでも WaterNow をお使いいただけます。後ほど再度お試しください。";
+"Try again" = "もう一度試す";
+"Continue without subscription" = "購入せずに続ける";
+
+/* v1.0.3 — purchase result surface (Apple 2.1(b) fix) */
+"OK" = "OK";
+"Purchase failed" = "購入に失敗しました";
+"Purchase canceled." = "購入をキャンセルしました。";
+"Purchase pending" = "購入処理中";
+"Purchase pending. We'll complete it shortly." = "購入処理中です。まもなく完了します。";
+"Product unavailable. Please try again later." = "商品をご利用いただけません。しばらくしてからもう一度お試しください。";
+"Purchase verification failed. Please contact support." = "購入の確認に失敗しました。サポートまでお問い合わせください。";
+"Unknown purchase result. Please try again." = "購入処理の結果が不明です。もう一度お試しください。";
+"Restores a previous purchase" = "以前の購入を復元します";
+"Purchase WaterNow Pro for %@" = "%@ で WaterNow Pro を購入";

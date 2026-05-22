@@ -76,18 +76,23 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showSettings) {
                 SettingsView()
+                    .environment(iap)
+                    .environment(store)
                     .environment(l10n)
                     .environment(\.locale, l10n.currentLocale)
                     .id(l10n.override)
             }
             .sheet(isPresented: $showPaywall) {
                 PaywallView()
+                    .environment(iap)
                     .environment(l10n)
                     .environment(\.locale, l10n.currentLocale)
                     .id(l10n.override)
             }
             .sheet(isPresented: $showCustomAmount) {
                 customAmountSheet
+                    .environment(iap)
+                    .environment(store)
                     .environment(l10n)
                     .environment(\.locale, l10n.currentLocale)
                     .id(l10n.override)

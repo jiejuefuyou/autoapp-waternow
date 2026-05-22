@@ -82,3 +82,21 @@
 "Custom amount, Pro only" = "自定义水量,仅限 Pro";
 "Time to hydrate" = "该喝水了";
 "Tap to log your water intake." = "点击记录你的饮水量。";
+
+/* v1.0.3 — paywall loading fallback (Apple 2.1(b) fix) */
+"Loading products…" = "正在加载商品…";
+"Products are temporarily unavailable. You can continue using WaterNow for free, or try again later." = "暂时无法获取商品信息。你可以继续免费使用 WaterNow,稍后再试。";
+"Try again" = "重试";
+"Continue without subscription" = "不购买,继续使用";
+
+/* v1.0.3 — purchase result surface (Apple 2.1(b) fix) */
+"OK" = "好的";
+"Purchase failed" = "购买失败";
+"Purchase canceled." = "已取消购买。";
+"Purchase pending" = "购买待处理";
+"Purchase pending. We'll complete it shortly." = "购买待处理,稍后会自动完成。";
+"Product unavailable. Please try again later." = "商品暂时不可用,请稍后再试。";
+"Purchase verification failed. Please contact support." = "购买验证失败,请联系技术支持。";
+"Unknown purchase result. Please try again." = "购买结果未知,请重试。";
+"Restores a previous purchase" = "恢复以前的购买";
+"Purchase WaterNow Pro for %@" = "以 %@ 购买 WaterNow Pro";
