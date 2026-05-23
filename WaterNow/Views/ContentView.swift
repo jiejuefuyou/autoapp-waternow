@@ -32,8 +32,9 @@ struct ContentView: View {
                 VStack(spacing: 22) {
                     progressRing
 
-                    Text("\(store.todayTotal()) / \(store.dailyGoalML) ml")
-                        .font(.title.bold().monospacedDigit())
+                    Text("/ \(store.dailyGoalML) ml")
+                        .font(.subheadline.monospacedDigit())
+                        .foregroundStyle(.secondary)
 
                     Text(String(format: NSLocalizedString("%@ of daily goal", comment: "Percent label under hydration ring"),
                                 "\(Int(store.todayPercent() * 100))%"))
@@ -104,37 +105,59 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Progress ring
+    // MARK: - Progress ring (TimelineView sine-wave fill — art-audit P0 2026-05-23)
 
+    /// Hero hydration visual: a circular vessel whose water level reflects
+    /// today's intake ratio, animated as a continuous sine wave (slow,
+    /// non-distracting — amplitude 6pt, period ~5.2s, phase advances at 1.2 rad/s).
+    /// The current ml value floats inside the ring at 64pt rounded-bold with
+    /// `.contentTransition(.numericText())` so additions morph the digits.
     private var progressRing: some View {
-        ZStack {
+        let ratio = max(0, min(1, store.todayPercent()))
+        return ZStack {
+            // Static background ring (vessel outline)
             Circle()
-                .stroke(.tertiary, lineWidth: 16)
+                .stroke(Color.secondary.opacity(0.18), lineWidth: 12)
                 .frame(width: 200, height: 200)
 
-            Circle()
-                .trim(from: 0, to: store.todayPercent())
-                .stroke(
-                    LinearGradient(
-                        colors: [Color(red: 0.31, green: 0.76, blue: 0.97),
-                                 Color(red: 0.012, green: 0.608, blue: 0.898)],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    ),
-                    style: StrokeStyle(lineWidth: 16, lineCap: .round)
-                )
-                .rotationEffect(.degrees(-90))
-                .frame(width: 200, height: 200)
-                .animation(.easeInOut(duration: 0.35), value: store.todayPercent())
-
-            VStack(spacing: 2) {
-                Text(BeverageType.water.emoji)
-                    .font(.system(size: 56))
-                Text(LocalizedStringKey("Today"))
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+            // Animated sine-wave fill clipped to the ring interior.
+            TimelineView(.animation) { context in
+                let t = context.date.timeIntervalSinceReferenceDate
+                let phase = t * 1.2 / (2 * .pi)  // slow drift, ~0.19 Hz
+                WaveShape(progress: ratio, phase: phase)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.31, green: 0.76, blue: 0.97).opacity(0.85),
+                                Color(red: 0.012, green: 0.608, blue: 0.898).opacity(0.95)
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .frame(width: 188, height: 188)
+                    .clipShape(Circle())
             }
+            .frame(width: 188, height: 188)
+            .animation(.easeInOut(duration: 0.45), value: ratio)
+
+            // Floating 64pt ml counter — uses numericText content transition.
+            VStack(spacing: 0) {
+                Text("\(store.todayTotal())")
+                    .font(.system(size: 64, weight: .heavy, design: .rounded))
+                    .monospacedDigit()
+                    .foregroundStyle(Color(red: 0.012, green: 0.46, blue: 0.78))
+                    .contentTransition(.numericText(value: Double(store.todayTotal())))
+                    .shadow(color: .white.opacity(0.6), radius: 1, x: 0, y: 1)
+                Text("ml")
+                    .font(.system(size: 18, weight: .medium, design: .rounded))
+                    .foregroundStyle(.secondary)
+                    .offset(y: -4)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel(Text(String(format: NSLocalizedString("%d milliliters today", comment: "Accessibility hero ml count"), store.todayTotal())))
         }
+        .frame(width: 200, height: 200)
     }
 
     // MARK: - Streak badge
@@ -326,5 +349,53 @@ struct ContentView: View {
                 }
             }
         }
+    }
+}
+
+// MARK: - WaveShape
+
+/// Custom `Shape` rendering a sine-wave water surface sitting at `progress`
+/// of the bounding rect (0 = empty / surface at bottom, 1 = full / surface at
+/// top). `phase` advances over time to produce horizontal drift.
+///
+/// Design tokens (art-audit 2026-05-23):
+///   - amplitude: 6pt (subtle, never obscures the 64pt ml counter)
+///   - wavelength: rect.width / 1.5 (≈ 1.5 cycles across diameter)
+///   - sample step: 2pt (smooth on @3x without overdraw)
+///   - rendering: filled polygon from wave crest down to bottom edge
+struct WaveShape: Shape {
+    /// Vertical fill ratio, 0...1. 0 = empty, 1 = full.
+    var progress: Double
+    /// Phase offset in cycles (1.0 == one full wavelength).
+    var phase: Double
+
+    /// Drive the wave drift by animating only `phase` — `progress` is
+    /// animated separately via the parent `.animation(_:value:)` modifier.
+    var animatableData: Double {
+        get { phase }
+        set { phase = newValue }
+    }
+
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let amplitude: CGFloat = 6
+        let wavelength = max(rect.width / 1.5, 1)
+        // Inset the resting water surface by `amplitude` on each side so the
+        // crest never punches above the vessel top or trough below the bottom.
+        let surface = rect.height * CGFloat(1 - progress)
+        let clampedSurface = min(max(surface, amplitude), rect.height - amplitude)
+
+        path.move(to: CGPoint(x: 0, y: clampedSurface))
+        var x: CGFloat = 0
+        while x <= rect.width {
+            let radians = (x / wavelength + CGFloat(phase)) * 2 * .pi
+            let y = clampedSurface + sin(radians) * amplitude
+            path.addLine(to: CGPoint(x: x, y: y))
+            x += 2
+        }
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        path.addLine(to: CGPoint(x: 0, y: rect.height))
+        path.closeSubpath()
+        return path
     }
 }
