@@ -29,7 +29,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 22) {
+                VStack(spacing: 22) {   // 22 = hero rhythm between md(16)/lg(24); ring + meta block specific
                     progressRing
 
                     Text("/ \(store.dailyGoalML) ml")
@@ -50,8 +50,8 @@ struct ContentView: View {
                     quickAddRow
                         .padding(.horizontal)
                 }
-                .padding()
-                .padding(.bottom, 24)
+                .padding(Spacing.md)
+                .padding(.bottom, Spacing.lg)
                 .frame(maxWidth: 600)
                 .frame(maxWidth: .infinity)
             }
@@ -62,7 +62,7 @@ struct ContentView: View {
                         .accessibilityLabel(Text("Settings"))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    HStack(spacing: 8) {
+                    HStack(spacing: Spacing.sm) {
                         streakBadge
                         if !iap.isPremium {
                             Button { showPaywall = true } label: {
@@ -164,15 +164,15 @@ struct ContentView: View {
 
     private var streakBadge: some View {
         let streak = store.currentStreakDays()
-        return HStack(spacing: 4) {
+        return HStack(spacing: Spacing.xs) {
             Image(systemName: "flame.fill")
                 .foregroundStyle(streak > 0 ? .orange : .secondary)
             Text("\(streak)")
                 .font(.caption.bold().monospacedDigit())
                 .foregroundStyle(streak > 0 ? .primary : .secondary)
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 6)
+        .padding(.horizontal, 10)   // 10 = pill horizontal, between sm(8)/md(16)
+        .padding(.vertical, 6)      // tight pill vertical — smaller than Spacing.sm
         .background(.ultraThinMaterial, in: Capsule())
         .accessibilityLabel(Text(String(format: NSLocalizedString("Streak %d days", comment: "Accessibility label for streak"), streak)))
     }
@@ -186,7 +186,7 @@ struct ContentView: View {
     }
 
     private var cupGrid: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {   // 10 = section header→grid rhythm, between sm(8)/md(16)
             Text(LocalizedStringKey("Cups today"))
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
@@ -213,11 +213,11 @@ struct ContentView: View {
             #endif
         } label: {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: Radius.md)
                     .fill(filled ? Color.accentColor.opacity(0.18) : Color.secondary.opacity(0.10))
                     .frame(height: 56)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 12)
+                        RoundedRectangle(cornerRadius: Radius.md)
                             .stroke(filled ? Color.accentColor : Color.secondary.opacity(0.35), lineWidth: filled ? 2 : 1)
                     )
                 Image(systemName: filled ? "drop.fill" : "drop")
@@ -249,12 +249,12 @@ struct ContentView: View {
     // MARK: - Quick Add row
 
     private var quickAddRow: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {   // 10 = section header→buttons rhythm
             Text(LocalizedStringKey("Quick add"))
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
 
-            HStack(spacing: 8) {
+            HStack(spacing: Spacing.sm) {
                 quickAddButton(title: "S", ml: 100)
                 quickAddButton(title: "M", ml: 250)
                 quickAddButton(title: "L", ml: 500)
@@ -277,8 +277,8 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(minHeight: 56)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.secondary.opacity(0.35), lineWidth: 1))
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: Radius.md))
+            .overlay(RoundedRectangle(cornerRadius: Radius.md).stroke(Color.secondary.opacity(0.35), lineWidth: 1))
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
@@ -308,8 +308,8 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(minHeight: 56)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.secondary.opacity(0.35), lineWidth: 1))
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: Radius.md))
+            .overlay(RoundedRectangle(cornerRadius: Radius.md).stroke(Color.secondary.opacity(0.35), lineWidth: 1))
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
