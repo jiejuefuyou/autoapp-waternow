@@ -57,10 +57,11 @@
 /* Onboarding */
 "Stay hydrated." = "Restez hydraté·e.";
 "Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "Touchez une taille de verre — eau, thé, café — et regardez votre objectif quotidien se remplir.";
-"Live in your Dynamic Island." = "Dans votre Dynamic Island, en permanence.";
-"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro : l'Activité en direct affiche votre progression toute la journée. Widget d'écran verrouillé pour enregistrer en un geste.";
+/* v1.0.5 — Sprint A' residue: OnboardingView screen 2+3 subtitles now match v1.0.4 paywall honesty. */
+"Log your own amount." = "Enregistrez votre propre quantité.";
+"Tap once to log. Set custom amounts in ml — no subscription, no ads." = "Un toucher pour enregistrer. Choisissez la quantité en ml — sans abonnement, sans publicité.";
 "$1.99 once." = "1,99 $ en une fois.";
-"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro : historique complet, Apple Watch, rappels personnalisés, statistiques hebdomadaires. Pas d'abonnement.";
+"Lifetime unlock. Support an indie developer." = "Déblocage à vie. Soutenez un développeur indépendant.";
 "Get Started" = "Commencer";
 "Skip" = "Passer";
 

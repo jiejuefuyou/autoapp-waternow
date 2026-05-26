@@ -15,20 +15,25 @@ struct OnboardingView: View {
             )
             .tag(0)
 
+            // v1.0.5 — Sprint A' residue: rewrite to match v1.0.4 paywall honesty.
+            // Earlier copy advertised Dynamic Island / Live Activity / Lock-screen
+            // widget / Apple Watch / weekly insights / custom reminders / full
+            // history — none of which ship. Only the custom-amount gate exists
+            // in the binary (ContentView.customAddButton, IAPManager.isPremium).
             screen(
                 index: 1,
-                icon: "waveform.path.ecg",
-                title: LocalizedStringKey("Live in your Dynamic Island."),
-                subtitle: LocalizedStringKey("Pro: Live Activity shows progress all day. Lock screen widget for one-tap log."),
+                icon: "slider.horizontal.3",
+                title: LocalizedStringKey("Log your own amount."),
+                subtitle: LocalizedStringKey("Tap once to log. Set custom amounts in ml — no subscription, no ads."),
                 color: .blue
             )
             .tag(1)
 
             screen(
                 index: 2,
-                icon: "applewatch",
+                icon: "heart.fill",
                 title: LocalizedStringKey("$1.99 once."),
-                subtitle: LocalizedStringKey("Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription."),
+                subtitle: LocalizedStringKey("Lifetime unlock. Support an indie developer."),
                 color: .accentColor,
                 showCTA: true
             )

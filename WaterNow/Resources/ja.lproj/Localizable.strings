@@ -57,10 +57,11 @@
 /* Onboarding */
 "Stay hydrated." = "こまめに水分補給を。";
 "Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "カップサイズをタップするだけ。水・お茶・コーヒーで、1日の目標が満たされていきます。";
-"Live in your Dynamic Island." = "ダイナミックアイランドで常に確認。";
-"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro:ライブアクティビティで進捗を一日中表示。ロック画面ウィジェットでワンタップ記録。";
+/* v1.0.5 — Sprint A' residue: OnboardingView screen 2+3 subtitles now match v1.0.4 paywall honesty. */
+"Log your own amount." = "好きな量で記録。";
+"Tap once to log. Set custom amounts in ml — no subscription, no ads." = "タップ1回で記録。好きな量(ml)で自由に — サブスクなし、広告なし。";
 "$1.99 once." = "1.99 ドル、買い切り。";
-"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:全履歴、Apple Watch、カスタムリマインダー、週次インサイト。サブスクリプションなし。";
+"Lifetime unlock. Support an indie developer." = "買い切りで永久に。個人開発者を応援。";
 "Get Started" = "はじめる";
 "Skip" = "スキップ";
 

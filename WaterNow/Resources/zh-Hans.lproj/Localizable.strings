@@ -57,10 +57,11 @@
 /* Onboarding */
 "Stay hydrated." = "随时补水。";
 "Tap a cup size — water, tea, coffee — and watch your daily goal fill up." = "点一下杯量——水、茶、咖啡——看着每日目标一点点被填满。";
-"Live in your Dynamic Island." = "在灵动岛上常驻。";
-"Pro: Live Activity shows progress all day. Lock screen widget for one-tap log." = "Pro:实时活动全天显示进度,锁屏小组件一键记录。";
+/* v1.0.5 — Sprint A' residue: OnboardingView screen 2+3 subtitles now match v1.0.4 paywall honesty. */
+"Log your own amount." = "想喝多少,就记多少。";
+"Tap once to log. Set custom amounts in ml — no subscription, no ads." = "点一下即可记录。按毫升自定义任意水量——无订阅、无广告。";
 "$1.99 once." = "1.99 美元,买断。";
-"Pro: full history, Apple Watch, custom reminders, weekly insights. No subscription." = "Pro:完整历史、Apple Watch、自定义提醒、每周洞察,无订阅。";
+"Lifetime unlock. Support an indie developer." = "一次买断,永久解锁。支持独立开发者。";
 "Get Started" = "开始使用";
 "Skip" = "跳过";
 
