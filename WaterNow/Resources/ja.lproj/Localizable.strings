@@ -42,13 +42,12 @@
 /* Paywall */
 "WaterNow Pro" = "WaterNow Pro";
 "One-time purchase. No subscription. Unlock everything forever." = "買い切り。サブスクリプションなし。すべての機能を永続的に解除します。";
-"Full history (vs 7 days free)" = "全期間の履歴(無料版は7日間)";
-"Lock screen widget" = "ロック画面ウィジェット";
-"Live Activity (Dynamic Island)" = "ライブアクティビティ(ダイナミックアイランド)";
-"Apple Watch complication" = "Apple Watch コンプリケーション";
-"Custom hydration reminders" = "水分補給リマインダーをカスタマイズ";
-"Weekly + monthly insights" = "週次・月次のインサイト";
-"Custom themes + cup sizes" = "テーマとカップサイズのカスタマイズ";
+
+/* v1.0.4 — honest paywall feature list (replaces 7 lying keys from v1.0.3) */
+"Log any custom amount in ml" = "好きな量(ml)で自由に記録";
+"Lifetime unlock — no subscription" = "買い切り — サブスクリプションなし";
+"Support an indie developer" = "個人開発者を応援する";
+
 "No subscription. No data collected. Ever." = "サブスクリプションなし。データは一切収集しません。";
 "Close" = "閉じる";
 "Processing…" = "処理中…";

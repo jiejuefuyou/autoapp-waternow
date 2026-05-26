@@ -42,13 +42,12 @@
 /* Paywall */
 "WaterNow Pro" = "WaterNow Pro";
 "One-time purchase. No subscription. Unlock everything forever." = "一次买断,无订阅,永久解锁全部功能。";
-"Full history (vs 7 days free)" = "完整历史记录(免费版仅 7 天)";
-"Lock screen widget" = "锁屏小组件";
-"Live Activity (Dynamic Island)" = "实时活动(灵动岛)";
-"Apple Watch complication" = "Apple Watch 复杂功能";
-"Custom hydration reminders" = "自定义喝水提醒";
-"Weekly + monthly insights" = "周报与月报";
-"Custom themes + cup sizes" = "自定义主题与水杯尺寸";
+
+/* v1.0.4 — honest paywall feature list (replaces 7 lying keys from v1.0.3) */
+"Log any custom amount in ml" = "按毫升自定义记录任意水量";
+"Lifetime unlock — no subscription" = "一次买断,无订阅";
+"Support an indie developer" = "支持独立开发者";
+
 "No subscription. No data collected. Ever." = "无订阅,永不收集任何数据。";
 "Close" = "关闭";
 "Processing…" = "处理中…";

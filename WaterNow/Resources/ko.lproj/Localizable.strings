@@ -42,13 +42,12 @@
 /* Paywall */
 "WaterNow Pro" = "WaterNow Pro";
 "One-time purchase. No subscription. Unlock everything forever." = "일회 구매. 구독 없음. 모든 기능을 영구적으로 잠금 해제합니다.";
-"Full history (vs 7 days free)" = "전체 기록 (무료는 7일)";
-"Lock screen widget" = "잠금 화면 위젯";
-"Live Activity (Dynamic Island)" = "라이브 액티비티 (다이내믹 아일랜드)";
-"Apple Watch complication" = "Apple Watch 컴플리케이션";
-"Custom hydration reminders" = "맞춤 수분 보충 알림";
-"Weekly + monthly insights" = "주간 + 월간 인사이트";
-"Custom themes + cup sizes" = "맞춤 테마 + 컵 크기";
+
+/* v1.0.4 — honest paywall feature list (replaces 7 lying keys from v1.0.3) */
+"Log any custom amount in ml" = "원하는 양(ml)을 자유롭게 기록";
+"Lifetime unlock — no subscription" = "평생 잠금 해제 — 구독 없음";
+"Support an indie developer" = "1인 개발자를 응원하기";
+
 "No subscription. No data collected. Ever." = "구독 없음. 데이터를 절대 수집하지 않습니다.";
 "Close" = "닫기";
 "Processing…" = "처리 중…";

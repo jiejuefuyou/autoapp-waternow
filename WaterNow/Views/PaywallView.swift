@@ -27,13 +27,16 @@ struct PaywallView: View {
                         .padding(.horizontal)
 
                     VStack(alignment: .leading, spacing: 14) {
-                        feature("calendar",                  LocalizedStringKey("Full history (vs 7 days free)"))
-                        feature("rectangle.on.rectangle",    LocalizedStringKey("Lock screen widget"))
-                        feature("waveform.path.ecg",         LocalizedStringKey("Live Activity (Dynamic Island)"))
-                        feature("applewatch",                LocalizedStringKey("Apple Watch complication"))
-                        feature("bell.fill",                 LocalizedStringKey("Custom hydration reminders"))
-                        feature("chart.bar.fill",            LocalizedStringKey("Weekly + monthly insights"))
-                        feature("paintpalette.fill",         LocalizedStringKey("Custom themes + cup sizes"))
+                        // v1.0.4 — honest paywall (Apple 2.3.1 + 3.1.2(a) fix).
+                        // Earlier versions advertised 6 features that did not
+                        // ship (lock-screen widget / Live Activity / Apple
+                        // Watch / weekly insights / themes / custom reminders).
+                        // Only the custom-amount gate exists in the binary
+                        // (see ContentView.customAddButton, IAPManager.isPremium).
+                        // Copy now matches shipped reality.
+                        feature("plus.circle.fill",          LocalizedStringKey("Log any custom amount in ml"))
+                        feature("infinity",                  LocalizedStringKey("Lifetime unlock — no subscription"))
+                        feature("heart.fill",                LocalizedStringKey("Support an indie developer"))
                     }
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)

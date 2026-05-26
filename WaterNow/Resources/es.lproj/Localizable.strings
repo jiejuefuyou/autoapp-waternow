@@ -42,13 +42,12 @@
 /* Paywall */
 "WaterNow Pro" = "WaterNow Pro";
 "One-time purchase. No subscription. Unlock everything forever." = "Compra única. Sin suscripción. Desbloquea todo para siempre.";
-"Full history (vs 7 days free)" = "Historial completo (vs 7 días gratis)";
-"Lock screen widget" = "Widget de la pantalla bloqueada";
-"Live Activity (Dynamic Island)" = "Actividad en directo (Dynamic Island)";
-"Apple Watch complication" = "Complicación para Apple Watch";
-"Custom hydration reminders" = "Recordatorios de hidratación personalizados";
-"Weekly + monthly insights" = "Resúmenes semanales y mensuales";
-"Custom themes + cup sizes" = "Temas y tamaños de vaso personalizados";
+
+/* v1.0.4 — honest paywall feature list (replaces 7 lying keys from v1.0.3) */
+"Log any custom amount in ml" = "Registra cualquier cantidad en ml";
+"Lifetime unlock — no subscription" = "Desbloqueo de por vida — sin suscripción";
+"Support an indie developer" = "Apoya a un desarrollador indie";
+
 "No subscription. No data collected. Ever." = "Sin suscripción. Nunca recopilamos datos.";
 "Close" = "Cerrar";
 "Processing…" = "Procesando…";
